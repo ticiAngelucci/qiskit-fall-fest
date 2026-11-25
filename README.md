@@ -6,6 +6,8 @@ No hay captura en vivo, ni hardware, ni un Random Forest. Es el mismo recorrido 
 
 Repositorio: [github.com/ticiAngelucci/qiskit-fall-fest](https://github.com/ticiAngelucci/qiskit-fall-fest)
 
+Ticiana Angelucci · [LinkedIn](https://www.linkedin.com/in/ticiana-angelucci-12098b23a/)
+
 ## Qué pregunta responde
 
 ¿Este flujo es tráfico normal o es un DDoS?
