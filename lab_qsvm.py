@@ -26,6 +26,19 @@ N_TEST = 8
 CSV = Path(__file__).resolve().parent / "data" / "cicids_benign_ddos.csv"
 
 
+def asegurar_csv(path: Path) -> None:
+    """Si el CSV entero no vino en el clone, lo arma desde data/parts/."""
+    if path.exists() and path.stat().st_size > 1000:
+        return
+    partes = sorted((path.parent / "parts").glob("part-*.csv"))
+    if not partes:
+        raise FileNotFoundError(path)
+    datos = b"".join(p.read_bytes() for p in partes)
+    if not datos.endswith(b"\n"):
+        datos += b"\n"
+    path.write_bytes(datos)
+
+
 def cargar(path: Path) -> tuple[np.ndarray, np.ndarray]:
     tabla = pd.read_csv(path)
     tabla.columns = [c.strip() for c in tabla.columns]
@@ -37,6 +50,7 @@ def cargar(path: Path) -> tuple[np.ndarray, np.ndarray]:
 
 
 def main() -> None:
+    asegurar_csv(CSV)
     x, y = cargar(CSV)
     print(f"filas {len(y)}  columnas {x.shape[1]}  DDoS {int(y.sum())}")
 
