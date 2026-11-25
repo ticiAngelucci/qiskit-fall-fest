@@ -8,6 +8,8 @@ Repositorio: [github.com/ticiAngelucci/qiskit-fall-fest](https://github.com/tici
 
 Ticiana Angelucci · [LinkedIn](https://www.linkedin.com/in/ticiana-angelucci-12098b23a/)
 
+CuyoConnect · [sitio](https://cuyoconnect.com/) · [Instagram](https://www.instagram.com/cuyoconnect/) · [X](https://x.com/CuyoConnect) · [LinkedIn](https://www.linkedin.com/company/cuyoconnect/) · [Telegram](https://t.me/+dYDu2fqGC3Y1ZDVh)
+
 ## Qué pregunta responde
 
 ¿Este flujo es tráfico normal o es un DDoS?
