@@ -14,7 +14,7 @@ Repositorio: [github.com/ticiAngelucci/qiskit-fall-fest](https://github.com/tici
 - **DDoS** es un ataque de denegación de servicio: muchas peticiones coordinadas para dejar un servicio inaccesible.
 - Un **flujo** es el resumen de una conexión (duración, paquetes, bytes), no el paquete suelto.
 
-Los datos están en `data/cicids_benign_ddos.csv`: 120 BENIGN y 120 DDoS, recortados del viernes de [CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html). El detalle está en `data/ORIGEN.md`.
+Los datos están en `data/cicids_benign_ddos.csv`: 120 BENIGN y 120 DDoS, recortados del viernes de [CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html). El detalle está en `data/ORIGEN.md`. Si al clonar el CSV no está suelto, `lab_qsvm.py` lo junta solo desde `data/parts/`.
 
 ## Cómo correrlo
 

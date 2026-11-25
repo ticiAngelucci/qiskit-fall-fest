@@ -1,0 +1,37 @@
+name: Armar CSV
+on:
+  push:
+    paths:
+      - "data/parts/**"
+      - ".github/workflows/armar-csv.yml"
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Juntar el recorte
+        run: |
+          cat data/parts/part-*.csv > data/cicids_benign_ddos.csv
+          python3 - << 'PY'
+          import csv
+          from collections import Counter
+          with open("data/cicids_benign_ddos.csv", newline="") as f:
+              rows = list(csv.DictReader(f))
+          labels = Counter(r["Label"].strip() for r in rows)
+          print(len(rows), dict(labels))
+          assert len(rows) == 240, len(rows)
+          assert labels["BENIGN"] == 120 and labels["DDoS"] == 120
+          PY
+      - name: Subir el CSV entero
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cicids_benign_ddos.csv
+          if git diff --cached --quiet; then
+            echo "el CSV ya estaba"
+          else
+            git commit -m "Agrega el recorte de CICIDS2017 (120 BENIGN y 120 DDoS)"
+            git push
+          fi
