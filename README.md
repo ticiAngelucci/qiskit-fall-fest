@@ -2,7 +2,7 @@
 
 Base para seguir después del Qiskit Fall Fest. El circuito compara dos flujos. La SVM clásica pone la clase.
 
-No es la tesina. No hay captura en vivo, ni hardware, ni un Random Forest. Es el mismo recorrido de la charla, en un archivo que se puede correr.
+No hay captura en vivo, ni hardware, ni un Random Forest. Es el mismo recorrido de la charla, en un archivo que se puede correr.
 
 Repositorio: [github.com/ticiAngelucci/qiskit-fall-fest](https://github.com/ticiAngelucci/qiskit-fall-fest)
 
@@ -42,7 +42,7 @@ La primera corrida tarda, porque cada par de flujos es un circuito. Por eso el k
    - El cruce lineal une solo vecinos: q0 con q1, y q1 con q2. Cada cruce es un CNOT, una fase ZZ y otro CNOT. No hay cruce directo entre q0 y q2.
 5. Estima el kernel de fidelidad en un simulador sin ruido. `K[i, j]` es la probabilidad de medir `000` al comparar el flujo i con el j. Cerca de 1, se parecen. Cerca de 0, no.
 6. Ajusta una SVM con `kernel="precomputed"`. La matriz ya está calculada: la SVM no arma otro circuito y no elige la clase dentro del circuito.
-7. En la misma cohorte chica corre una SVM de kernel RBF, para ver la versión clásica de esa cuenta. No es el resultado de la tesina.
+7. En la misma cohorte chica corre una SVM de kernel RBF, para ver la versión clásica de esa cuenta.
 
 ## Qué pueden cambiar
 

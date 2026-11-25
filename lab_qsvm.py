@@ -1,7 +1,7 @@
 """Laboratorio corto para el Qiskit Fall Fest.
 
 Carga un recorte real de CICIDS2017 (BENIGN contra DDoS), lo baja a 3
-variables y entrena un QSVM mínimo. No es la tesina.
+variables y entrena un QSVM mínimo.
 
 El kernel cuántico no se calcula sobre las 240 filas: cada par de muestras
 es un circuito. N_TRAIN y N_TEST están chicos a propósito.
@@ -86,7 +86,7 @@ def main() -> None:
     pred = qsvm.predict(k_test)
     print("QSVM  aciertos", int((pred == y_test).sum()), "de", len(y_test))
 
-    # Misma cohorte chica, kernel clásico. No es el Random Forest de la tesina.
+    # Misma cohorte chica, kernel clásico. No es un Random Forest.
     clasico = SVC(kernel="rbf")
     clasico.fit(z_train, y_train)
     pred_c = clasico.predict(z_test)
