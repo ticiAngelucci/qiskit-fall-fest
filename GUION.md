@@ -8,30 +8,24 @@ Ticiana Angelucci
 titiangelucci08@gmail.com
 https://github.com/ticiAngelucci/qiskit-fall-fest
 
-Esto es lo que se dice, diapositiva por diapositiva. El texto de **Decilo así** se puede leer casi tal cual. **En la diapo** es lo que hay que señalar. **No digas** es para no mezclar este relato con otra cosa.
-
-La charla dura unos 40 minutos. Los tiempos son una guía: si una diapo se alarga, la siguiente de código se puede acortar. El público no conoce QML, QSVM, CICIDS2017, BENIGN ni DDoS. Cada término se define la primera vez que aparece.
-
-## Tiempos
-
-| # | Diapositiva | Min |
-|---|---|---|
-| 01 | Portada | 1 |
-| 02 | En estos 40 minutos | 2 |
-| 03 | Qué es el aprendizaje automático cuántico | 4 |
-| 04 | ¿Este tráfico es legítimo o es un DDoS? | 4 |
-| 05 | No hace falta meter el flujo entero | 3 |
-| 06 | El circuito no elige la clase | 3 |
-| 07 | El kernel clásico mide cercanía | 3 |
-| 08 | Qué pasa con cada par de muestras | 2 |
-| 09 | Compuerta por compuerta | 4 |
-| 10 | Por qué este circuito y no otro | 3 |
-| 11 | El CSV ya es el recorte | 2 |
-| 12 | Tres variables, tres qubits | 2 |
-| 13 | K es una probabilidad | 2 |
-| 14 | La SVM solo lee la matriz | 2 |
-| 15 | Qué se puede concluir | 3 |
-| 16 | Gracias por escuchar | 1 |
+| # | Diapositiva | 
+|---|---|
+| 01 | Portada |
+| 02 | En estos 40 minutos |
+| 03 | Qué es el aprendizaje automático cuántico |
+| 04 | ¿Este tráfico es legítimo o es un DDoS? |
+| 05 | No hace falta meter el flujo entero |
+| 06 | El circuito no elige la clase |
+| 07 | El kernel clásico mide cercanía |
+| 08 | Qué pasa con cada par de muestras |
+| 09 | Compuerta por compuerta |
+| 10 | Por qué este circuito y no otro |
+| 11 | El CSV ya es el recorte |
+| 12 | Tres variables, tres qubits |
+| 13 | K es una probabilidad |
+| 14 | La SVM solo lee la matriz |
+| 15 | Qué se puede concluir |
+| 16 | Gracias por escuchar |
 
 ---
 
@@ -39,9 +33,7 @@ La charla dura unos 40 minutos. Los tiempos son una guía: si una diapo se alarg
 
 **De un flujo de red a un kernel cuántico**
 
-**En la diapo.** CuyoConnect, el título, “Un QSVM mínimo con Qiskit”, tu nombre y la mascota a la derecha. No expliques el dibujo. Presentate y decí de qué va la hora.
-
-**Decilo así.**
+“Un QSVM mínimo con Qiskit”
 
 Buenas. Soy Ticiana Angelucci, de CuyoConnect, en Mendoza. En estos 40 minutos vamos a ir de un flujo de red a un kernel cuántico.
 
@@ -49,15 +41,9 @@ No hace falta que hayan usado Qiskit. La idea es una sola. Un circuito puede med
 
 Al final se llevan el repositorio, con el pedazo de datos y el código, para repetir este mismo recorrido.
 
----
-
 ## 02 · Mapa de la hora · 2 min
 
-**En estos 40 minutos**
-
-**En la diapo.** Cuatro tarjetas, en este orden: aprendizaje automático cuántico, mapa de 3 qubits, kernel de fidelidad, SVM clásica. Abajo, la frase del repositorio. Recorré las cuatro con el dedo o el cursor. No saltees el pie.
-
-**Decilo así.**
+**En la diapo.**
 
 Vamos a ver cuatro cosas, y en este orden.
 
@@ -71,17 +57,11 @@ Cuarto, la SVM clásica. Es el algoritmo que, con esos parecidos ya calculados, 
 
 Cuando terminemos, se llevan el repositorio de GitHub, con el recorte de CICIDS2017, para correr esto ustedes. No hace falta anotar el código ahora. El código está al final de la charla, y el enlace queda en la última diapositiva.
 
-**No digas.** No hables de un dashboard, de captura en vivo, ni de que “el código entra en una pantalla”. Tampoco de hardware.
-
 ---
 
 ## 03 · Concepto · 4 min
 
 **Qué es el aprendizaje automático cuántico**
-
-**En la diapo.** A la izquierda, dos párrafos. A la derecha, tres pasos: una pastilla que dice “datos”, tres círculos q0, q1 y q2, y abajo otra pastilla que dice “SVM”. La frase de abajo es “una sola decisión”. Señalá de arriba hacia abajo: datos, circuito, SVM.
-
-**Decilo así.**
 
 El aprendizaje automático, el de siempre, hace esto: mira ejemplos que ya tienen etiqueta y ajusta una regla. Después, con esa regla, clasifica un caso nuevo. Si los ejemplos son correos ya marcados como spam o no spam, la regla aprende a marcar el próximo correo.
 
@@ -91,17 +71,13 @@ Acá el circuito no pone la clase. No dice “esto es un ataque”. Lo que hace 
 
 Miren el dibujo. Arriba están los datos. Bajan al circuito, que son estos tres qubits. El circuito no es el clasificador: es el lugar donde el flujo queda escrito. Abajo está la SVM, y ahí sí hay una sola decisión. No hay dos modelos compitiendo. Hay una sola decisión, y el circuito solo cambia cómo se mide el parecido.
 
-**No digas.** No digas que el circuito clasifica, ni que el modelo cuántico reemplaza al clásico. Eso se cierra recién en la diapositiva 15.
+El circuito no clasifica, ni el modelo cuántico reemplaza al clásico.
 
 ---
 
 ## 04 · Los datos · 4 min
 
 **¿Este tráfico es legítimo o es un DDoS?**
-
-**En la diapo.** A la derecha, BENIGN son pocos puntos separados y DDoS es una nube densa. Abajo, el recuadro “dos clases, un flujo”. El dibujo es una imagen, no un gráfico de los datos reales.
-
-**Decilo así.**
 
 La pregunta de este trabajo es binaria. ¿Este tráfico es legítimo, o es un DDoS?
 
@@ -113,17 +89,13 @@ Esos flujos salen de CICIDS2017. Es un conjunto público, ya etiquetado, de una 
 
 El dibujo es para ver la idea, no los números. A la izquierda, BENIGN queda más suelto. A la derecha, DDoS se amontona. El modelo tiene que separar esas dos nubes.
 
-**Si preguntan.** El archivo original es el viernes a la tarde, `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`. El recorte que se llevan tiene 240 flujos: 120 BENIGN y 120 DDoS, 78 columnas, elegidos al azar entre las filas con todos los valores numéricos y finitos. Semilla 7. No es el dataset entero y no es tráfico capturado en vivo.
+El archivo original es el viernes a la tarde, `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`. El recorte que se llevan tiene 240 flujos: 120 BENIGN y 120 DDoS, 78 columnas, elegidos al azar entre las filas con todos los valores numéricos y finitos. Semilla 7. No es el dataset entero y no es tráfico capturado en vivo.
 
 ---
 
 ## 05 · Concepto · 3 min
 
 **No hace falta meter el flujo entero**
-
-**En la diapo.** A la izquierda, muchas barritas: las columnas. Una flecha dorada. A la derecha, tres círculos: q0, q1 y q2. El texto dice “una por qubit”.
-
-**Decilo así.**
 
 Un qubit es la unidad del circuito. Hasta que se mide, no está obligado a ser 0 o 1: puede estar en una combinación de los dos. Esa combinación es la superposición. Cuando se mide, el resultado sí es 0 o 1.
 
@@ -133,17 +105,11 @@ Para pasar de muchas columnas a tres números se usan componentes principales. S
 
 Tres no es un óptimo teórico. Nadie demostró que tres sea el mejor número para detectar DDoS. Tres es el tamaño en el que el circuito sigue siendo corto, se puede leer de punta a punta, y todavía mezcla información entre qubits. Con eso alcanza para estimar si dos flujos se parecen, sin meter el vector original de decenas de columnas.
 
-**No digas.** No digas que tres qubits es lo óptimo, ni que cada columna del CSV es un qubit.
-
 ---
 
 ## 06 · Concepto · 3 min
 
 **El circuito no elige la clase**
-
-**En la diapo.** Arriba, dos flujos unidos por una línea punteada que dice K. Abajo, un grupo BENIGN a la izquierda, un grupo DDoS a la derecha, y una línea vertical dorada. La palabra “margen” está al lado de esa línea, no encima.
-
-**Decilo así.**
 
 Una SVM, máquina de vectores de soporte, separa dos clases. No busca cualquier frontera. Busca la que deja el margen más amplio entre los ejemplos más difíciles de cada lado. Esos ejemplos, los que quedan pegados a la frontera, son los vectores de soporte. El resto casi no importa: la frontera la definen los que están en el borde.
 
@@ -159,10 +125,6 @@ En el dibujo, arriba está esa cuenta: dos flujos y, en el medio, K. Abajo ya no
 
 **El kernel clásico mide cercanía**
 
-**En la diapo.** Ejes: K en vertical, distancia en horizontal. Una curva dorada que arranca alta y cae. Un punto “cerca · 1” y otro “lejos · 0”.
-
-**Decilo así.**
-
 Antes del qubit, el kernel ya existe. K de x y z es el producto entre una transformación de x y la misma transformación de z. No hace falta construir esa transformación. Alcanza con evaluar K. Por eso se llama el truco del kernel: se obtiene el parecido en un espacio más cómodo sin mudarse a ese espacio.
 
 El kernel RBF hace eso con la distancia. La fórmula es K igual a e elevado a menos gamma por la distancia al cuadrado entre x y z. No hace falta escribirla. Lo que dice es simple. Si los dos flujos están cerca, la distancia es chica, la exponencial vale casi 1, y K se acerca a 1. Si están lejos, la exponencial se aplasta y K cae a 0. Gamma fija qué tan rápido cae. Gamma grande: solo se parecen los que están muy pegados. Gamma chica: se toleran flujos más separados.
@@ -176,10 +138,6 @@ La curva de la diapo es esa idea. Cerca, K vale 1. Lejos, K vale 0. El kernel cu
 ## 08 · El recorrido · 2 min
 
 **Qué pasa con cada par de muestras**
-
-**En la diapo.** Cinco tarjetas en fila: Carga, Invierte, Mide, Anota, Decide. Recorrelas de izquierda a derecha. No te detengas en la fórmula de cada una: la diapo 9 abre el circuito.
-
-**Decilo así.**
 
 Para llenar una sola celda de la matriz hay que comparar dos flujos. El recorrido es siempre el mismo.
 
@@ -196,10 +154,6 @@ Ese número se anota en una celda de la matriz de kernel. Fila i, columna j, flu
 ## 09 · El circuito · 4 min
 
 **Compuerta por compuerta**
-
-**En la diapo.** Tres cables continuos, q0, q1 y q2, de izquierda a derecha. En cada cable, primero H y después RZ. Más a la derecha, un cruce entre q0 y q1: CNOT, una caja ZZ, otro CNOT. Después el mismo bloque entre q1 y q2. No hay cable directo de q0 a q2. El párrafo de abajo se lee en voz alta: es la lógica del circuito.
-
-**Decilo así.**
 
 Se lee de izquierda a derecha, como una partitura. Cada línea horizontal es un qubit y no se corta.
 
@@ -219,10 +173,6 @@ Y el cierre, otra vez, porque es el error fácil: el circuito no elige la clase.
 
 **Por qué este circuito y no otro**
 
-**En la diapo.** Dos circuitos chicos, uno arriba del otro. El de arriba dice “lineal · solo vecinos”: un CNOT entre 0 y 1, otro entre 1 y 2. El de abajo dice “completo · todos los pares” y agrega, en dorado, el CNOT largo de 0 a 2. El dorado es el cruce que el lineal no tiene.
-
-**Decilo así.**
-
 Esta diapo dice por qué el circuito es este y no otro más largo.
 
 H pone al qubit en superposición. Sin eso, la fase de RZ no cambia la medición. RZ guarda la variable como un ángulo: dos flujos distintos, dos fases distintas. El bloque ZZ entrelaza vecinos, así el estado de un qubit depende del otro. Sin ese cruce, las tres variables no se combinan y el circuito las miraría por separado. Sería como tres reglas sueltas, no un parecido entre flujos.
@@ -231,7 +181,7 @@ El entrelazado de este mapa es lineal, no completo. Lineal une solo q0 con q1, y
 
 El completo une todos los pares. Además de los vecinos, cruza q0 con q2. En el dibujo de abajo ese cruce está en dorado, y es el único que el lineal no tiene. Dice casi lo mismo, con más compuertas. Se elige el lineal porque alcanza para que el parecido dependa de más de una variable, y porque en 40 minutos se puede seguir con el ojo.
 
-**Si preguntan.** En el código es `ZZFeatureMap` con `feature_dimension=3`, `reps=1` y `entanglement="linear"`. `reps=1` quiere decir que el bloque se escribe una sola vez. Más repeticiones alargan el mapa, no cambian la idea.
+En el código es `ZZFeatureMap` con `feature_dimension=3`, `reps=1` y `entanglement="linear"`. `reps=1` quiere decir que el bloque se escribe una sola vez. Más repeticiones alargan el mapa, no cambian la idea.
 
 ---
 
@@ -239,9 +189,6 @@ El completo une todos los pares. Además de los vecinos, cruza q0 con q2. En el 
 
 **El CSV ya es el recorte**
 
-**En la diapo.** Tres líneas. `read_csv`, la columna `Label` convertida a 0 y 1, y `drop` de esa columna. Leé el pie, no el código palabra por palabra.
-
-**Decilo así.**
 
 A partir de acá el relato es el del repositorio. Son pocas líneas, y cada una corresponde a algo que ya dijimos.
 
@@ -255,10 +202,6 @@ En esta diapo todavía no hay circuito. Hay una tabla y dos vectores: las variab
 
 **Tres variables, tres qubits**
 
-**En la diapo.** `StandardScaler`, `PCA` con 3 componentes, y `ZZFeatureMap` de 3, una repetición, entrelazado lineal. El pie define `feature_dimension`.
-
-**Decilo así.**
-
 `StandardScaler` pone cada columna en la misma escala. Si una columna es una duración de millones de microsegundos y otra es un conteo de 0 o 1, sin esto la grande se come a la chica. La escala se aprende con el entrenamiento y se aplica igual al resto. No se vuelve a calcular con los datos de prueba, porque eso sería espiar el examen.
 
 `PCA` deja tres coordenadas. Esas tres son las que entran al circuito.
@@ -271,27 +214,18 @@ En esta diapo todavía no hay circuito. Hay una tabla y dos vectores: las variab
 
 **K es una probabilidad**
 
-**En la diapo.** `FidelityQuantumKernel`, `ComputeUncompute` y `StatevectorSampler`. La última línea evalúa el kernel sobre el entrenamiento. El pie dice que acá no se elige la clase.
-
-**Decilo así.**
-
 La fidelidad es el solapamiento entre los dos estados. En este circuito, ese solapamiento es la probabilidad de medir 000 después de cargar un flujo y deshacer el otro. Por eso K es una probabilidad, no una distancia en kilómetros de paquetes.
 
 `ComputeUncompute` es justo ese procedimiento: aplicar U y después U daga. `StatevectorSampler` es un simulador ideal. Calcula el estado exacto. No hay ruido de un aparato, ni cola de un procesador real. Sirve para ver la cuenta limpia.
 
 `K[i, j]` compara el flujo i con el j. La diagonal, un flujo contra sí mismo, tiene que quedar cerca de 1. Acá todavía no se elige la clase. Solo se llena la matriz.
-
-**Si preguntan por el tiempo.** En el repositorio el kernel no se calcula sobre las 240 filas. Cada par es un circuito, y la cantidad de pares crece con el cuadrado. Por eso `N_TRAIN` es 24 y `N_TEST` es 8. Es a propósito, para que se pueda correr. No es el tamaño del resultado que vamos a citar en la diapositiva 15.
+En el repositorio el kernel no se calcula sobre las 240 filas. Cada par es un circuito, y la cantidad de pares crece con el cuadrado. Por eso `N_TRAIN` es 24 y `N_TEST` es 8. Es a propósito, para que se pueda correr. No es el tamaño del resultado que vamos a citar en la diapositiva 15.
 
 ---
 
 ## 14 · Código · 2 min
 
 **La SVM solo lee la matriz**
-
-**En la diapo.** `SVC(kernel="precomputed")`, el `fit` con la matriz y las etiquetas, y el `predict` de un flujo nuevo. El pie explica `precomputed`.
-
-**Decilo así.**
 
 `precomputed` quiere decir que la matriz ya está calculada. La SVM no arma otro circuito y no vuelve a pedir el kernel. Recibe números y ajusta los pesos.
 
@@ -305,33 +239,19 @@ En el mismo lugar donde está este kernel se puede poner el RBF de la diapositiv
 
 **Qué se puede concluir**
 
-**En la diapo.** Dos barras. Random Forest, 0,9997, en azul. QSVM, 0,8571, en dorado, un poco más corta. Abajo, “no lo reemplaza”. Leé la conclusión en voz alta. No dejes los números sueltos. La diapo nombra la tesina en la primera oración. Si no querés decir esa palabra, usá la frase de abajo: el Random Forest ve el flujo completo.
-
-**Decilo así.**
-
 El Random Forest es un modelo clásico. Muchos árboles de decisión votan una clase. Cada árbol mira el flujo y vota. La mayoría gana. Ese modelo ve el flujo completo, no solo las tres componentes que entran al circuito. Por eso no es el mismo partido: el clásico tiene más información de entrada.
 
 El número de la barra es el F1. El F1 junta en un solo número dos cosas. La precisión: de lo que marqué como ataque, cuánto lo era de verdad. Y la sensibilidad: de los ataques que había, cuántos encontré. Vale 1 cuando se detectan los ataques y, además, lo marcado como ataque realmente lo es. Vale 0 cuando esa cuenta se desarma.
 
 Sobre estos datos de CICIDS2017, el Random Forest llega a un F1 de 0,9997. Casi no se equivoca. La QSVM simulada llega a 0,8571. Detecta los ataques, y la precisión baja a 0,75: de cada cuatro flujos que marca como DDoS, uno no lo era.
 
-La frase para cerrar es esta, y es la de la diapo. Un kernel cuántico sí entra en esta tarea. Se puede usar. Con estos datos y este circuito, no reemplaza al modelo clásico.
-
-**No digas.** No digas que el cuántico ganó, ni que el 0,8571 sale de correr las 24 filas del repositorio. Ese número es la QSVM simulada de la comparación. El repositorio es el recorrido mínimo, para que se pueda estudiar el circuito. No cites hardware: no hay corrida en un procesador real en esta charla.
+La frase para cerrar es esta. Un kernel cuántico sí entra en esta tarea. Se puede usar. Con estos datos y este circuito, no reemplaza al modelo clásico.
 
 ---
 
 ## 16 · Cierre · 1 min
 
 **Gracias por escuchar**
-
-**En la diapo.** La mascota, CuyoConnect, tu nombre, el mail, Mendoza y el GitHub. Dejá la diapo quieta mientras dicen el enlace. No lo leas apurado.
-
-**Decilo así.**
-
-Gracias por escuchar. Soy Ticiana Angelucci, de CuyoConnect, en Mendoza. El mail está en la diapo.
-
-El código y el recorte de CICIDS2017 están en github.com/ticiAngelucci/qiskit-fall-fest. Ahí está el README, con los pasos para correrlo, y el CSV de 120 BENIGN y 120 DDoS.
 
 Si se llevan una sola frase: el circuito no clasifica. Mide si dos flujos se parecen. La SVM pone la clase. Y en estos datos, ese kernel se puede usar, pero no reemplaza al modelo clásico.
 
